@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: evgenii
+      changes:
+        - sqlFile:
+            path: db.migrations/migration.sql
+            relativeToChangelogFile: true
