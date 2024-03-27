@@ -1,20 +1,16 @@
 package com.example.hibernate2.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Entity
 @Table(schema = "joins")
+@IdClass(PersonId.class)
 public class Persons {
     @Id
     private String name;
@@ -23,8 +19,8 @@ public class Persons {
     @Id
     private int age;
     @Column(name = "phone_number")
-    private String phone_number;
+    private String phoneNumber;
     @Column(name = "city_of_living")
-    private String city_of_living;
+    private String cityOfLiving;
 
 }

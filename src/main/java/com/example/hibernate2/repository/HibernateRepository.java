@@ -15,8 +15,8 @@ public class HibernateRepository {
 
 
     public List<Persons> getPersons(String city) {
-        return entityManager.createQuery("select p from Persons p where p.city_of_living =" +
-                ":city order by p.city_of_living", Persons.class).setParameter("city", city).getResultList();
+        return entityManager.createQuery("select p from Persons p where p.cityOfLiving =" +
+                ":city order by p.cityOfLiving", Persons.class).setParameter("city", city).getResultList();
 
     }
 

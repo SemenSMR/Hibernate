@@ -19,12 +19,12 @@ create table joins.orders
 (
     id           serial PRIMARY KEY,
     date         DATE           not null,
-    costumer_id  integer references joins.customers (id),
+    customer_id  integer references joins.customers (id),
     product_name VARCHAR(255)   NOT NULL,
     amount       DECIMAL(10, 2) NOT NULL
 );
 
-insert into joins.orders(date, costumer_id, product_name, amount)
+insert into joins.orders(date, customer_id, product_name, amount)
 values ('2024-03-01', 1, 'Product A', 100.50),
        ('2024-03-02', 2, 'Product B', 75.20),
        ('2024-03-03', 3, 'Product C', 120.75),
@@ -38,8 +38,8 @@ create table joins.persons
     name           VARCHAR(255) NOT NULL,
     surname        VARCHAR(255) NOT NULL,
     age            INT          NOT NULL,
-    phone_number   VARCHAR(20),
-    city_of_living VARCHAR(255),
+    phoneNumber   VARCHAR(20),
+    cityOfLiving VARCHAR(255),
     PRIMARY KEY (name, surname, age)
 );
 
