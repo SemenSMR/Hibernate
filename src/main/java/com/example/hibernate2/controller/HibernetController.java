@@ -17,8 +17,15 @@ public class HibernetController {
 
 
     @GetMapping("persons/by-city")
-    public List<Persons> getPersons(@RequestParam String city){
+    public List<Persons> getPersons(@RequestParam String city) {
         return hibernateRepository.getPersons(city);
 
+
+    }
+
+    @GetMapping("/products/fetch-product")
+    public List<Persons> featchProduct(@RequestParam String name) {
+        return hibernateRepository.getProductName(name);
     }
 }
+
