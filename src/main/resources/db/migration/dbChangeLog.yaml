@@ -4,5 +4,5 @@ databaseChangeLog:
       author: evgenii
       changes:
         - sqlFile:
-            path: db.migrations/migration.sql
+            path: migration.sql
             relativeToChangelogFile: true

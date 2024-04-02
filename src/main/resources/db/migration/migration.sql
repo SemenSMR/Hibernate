@@ -51,3 +51,6 @@ VALUES ('John', 'Doe', 30, '123-456-7890', 'New York'),
        ('Daniel', 'Wilson', 40, '444-555-6666', 'Houston'),
        ('Sophia', 'Martinez', 33, '222-333-4444', 'Miami'),
        ('Oliver', 'Taylor', 27, '666-777-8888', 'Seattle');
+
+select p from joins.persons p where p.city_of_living =
+                :city order by p.city_of_living
