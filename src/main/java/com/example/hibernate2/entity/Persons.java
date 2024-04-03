@@ -1,15 +1,16 @@
 package com.example.hibernate2.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(schema = "joins")
+@Getter
+@Setter
+@Table(schema = "joins",name = "persons")
+
 @IdClass(PersonId.class)
 public class Persons {
     @Id
@@ -20,6 +21,7 @@ public class Persons {
     private int age;
     @Column(name = "phone_number")
     private String phoneNumber;
+
     @Column(name = "city_of_living")
     private String cityOfLiving;
 
