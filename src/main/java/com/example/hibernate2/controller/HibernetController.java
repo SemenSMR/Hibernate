@@ -21,6 +21,7 @@ public class HibernetController {
 
 
     @GetMapping("/persons/by-city")
+
     public List<Persons> getPersons(@RequestParam String city) {
         return personRepository.findByCityOfLiving(city);
 
@@ -32,13 +33,16 @@ public class HibernetController {
         return ordersRepository.findByProductNameByCustomerNameIgnoreCase(name);
     }
 
+
     @GetMapping("/persons/age")
     public List<Persons> getPersonsAge(@RequestParam int age) {
         return personRepository.findByAgeLessThanOrderByAgeAsc(age);
 
 
     }
+
     @GetMapping("/persons/nameandsurname")
+
     public List<Persons> getPersonsNameAndSurname(@RequestParam String name, String surname) {
         return personRepository.findByNameAndSurname(name, surname);
 
